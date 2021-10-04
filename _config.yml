@@ -28,14 +28,13 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
+# twitter:
+#  username: vszhub
+#  card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Hyungi Seong
   links:
-    - https://twitter.com/
     - https://github.com/hyungi
 google_site_verification: xxxxx
 lang: en
