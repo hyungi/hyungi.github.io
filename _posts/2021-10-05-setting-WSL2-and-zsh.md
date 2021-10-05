@@ -68,7 +68,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 다만 여기서 한가지 문제가 있다면.... jetbrain 사에서 제공하는 각종 IDE 의 terminal 에서 커서 위치가 이상하다는 것이죠 ㅜㅜ
 
-![cursor position error](../assets/images/wsl-zsh-jetbrain-terminal-cursor-error.png)
+![cursor position error](https://raw.githubusercontent.com/hyungi/hyungi.github.io/main/assets/images/wsl-zsh-jetbrain-terminal-cursor-error.png)
 
 아래 링크들 처럼 여기 저기 리포트는 올라가고 있는데 아직 해결 된건 없는것 같습니다...
 
@@ -78,5 +78,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 https://wayhome25.github.io/etc/2017/03/12/zsh-alias/
 
 ## 출처
-https://www.44bits.io/ko/post/wsl2-install-and-basic-usage
-https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/
+[https://www.44bits.io/ko/post/wsl2-install-and-basic-usage, https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/]
