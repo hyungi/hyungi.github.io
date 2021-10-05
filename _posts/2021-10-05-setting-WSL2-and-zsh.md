@@ -14,7 +14,7 @@ WSL2 로 넘어오면서 제약사항이 많이 적어 졌다고 해서 한번 �
 
 ### Before install WSL
 - BIOS 확인: 하드웨어 가상화를 이용해야 하기 때문에 아래 링크를 참조해서 자신의 PC 가 하드웨어 가상화를 enable 했는지 확인 할것
-  https://github.com/microsoft/WSL/issues/4120
+  [https://github.com/microsoft/WSL/issues/4120](https://github.com/microsoft/WSL/issues/4120)
 ```
 Can you ensure both these are enabled?
 Hardware Virtualization Assists* in the form of:
@@ -60,9 +60,9 @@ chsh -s $(which zsh)
 ```
 
 그리고 각종 테마와 플러그인을 사용하기 위해 빠질 수 없는 oh-my-zsh 를 설치해 줍니다.
-```shell
+{% highlight shell %}
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+{% endhighlight %}
 
 테마와 각종 플러그인 들은 .zshrc 파일 안에서 설정이 가능합니다.
 
@@ -72,10 +72,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 아래 링크들 처럼 여기 저기 리포트는 올라가고 있는데 아직 해결 된건 없는것 같습니다...
 
-[https://youtrack.jetbrains.com/issue/IDEA-267458, https://github.com/agnoster/agnoster-zsh-theme/issues/156]
+[https://youtrack.jetbrains.com/issue/IDEA-267458](https://youtrack.jetbrains.com/issue/IDEA-267458)
+[https://github.com/agnoster/agnoster-zsh-theme/issues/156](https://github.com/agnoster/agnoster-zsh-theme/issues/156)
 
 그래서 영 거슬리신다면, 아래 링크 처럼 아예 개행을 하도록 설정하시면 해결이 됩니다..
 https://wayhome25.github.io/etc/2017/03/12/zsh-alias/
 
 ## 출처
-[https://www.44bits.io/ko/post/wsl2-install-and-basic-usage, https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/]
+[https://www.44bits.io/ko/post/wsl2-install-and-basic-usage](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
+[https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/](https://tutorialpost.apptilus.com/code/posts/tools/using-zsh-oh-my-zsh/)
