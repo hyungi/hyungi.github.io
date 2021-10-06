@@ -9,9 +9,11 @@ toc: true
 ## Problem...
 문제가 생겼습니다...
 
-아래 명령어가 먹질 않습니다 ㅜㅜ
+WSL 에서 아래 명령어가 먹질 않습니다 ㅜㅜ
+
+맥북에서는 잘 되는데 이상하네요..
 ```shell
-bundle exec jekyll serve
+$ bundle exec jekyll serve
 Configuration file: /home/hyungi/IdeaProjects/hyungi.github.io/_config.yml
             Source: /home/hyungi/IdeaProjects/hyungi.github.io
        Destination: /home/hyungi/IdeaProjects/hyungi.github.io/_site
@@ -27,8 +29,8 @@ Configuration file: /home/hyungi/IdeaProjects/hyungi.github.io/_config.yml
     Server address: http://127.0.0.1:4000
   Server running... press ctrl-c to stop.
 ```
-
-Auto-generation 이 윈도우에서는 제대로 동작 안할수 있는데... 전 WSL 이긴 하지만 그래도 linux 를 쓰고 있는데...ㅠㅠ
+어라 근데 아래 메세지를 보니 뭔가 힌트가 있네요,
+Auto-generation 이 윈도우에서는 제대로 동작 안할수 있다는데... 전 WSL 이긴 하지만 그래도 linux 를 쓰고 있는데...ㅠㅠ
 
 --no-watch 라는 옵션을 한번 줘보도록 하겠습니다..
 
