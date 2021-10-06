@@ -47,10 +47,10 @@ $ gem install jekyll bundler
 ```
 이렇게 정상적으로 install 이 종료되면,
 다시 bundle install 을 진행하고, 최종적으로 실행을 해줍니다.
-```shell
+{% highlight bash %}
 $ bundle install
 $ bundle exec jekyll serve
-```
+{% endhighlight %}
 
 ### Running jekyll serve
 
