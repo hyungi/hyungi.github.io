@@ -56,3 +56,8 @@ author:
   name: Hyungi Seong
   url: https://github.com/hyungi/
   email: hyeonik7@gmail.com
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
