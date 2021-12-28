@@ -34,15 +34,18 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ### Install Ubuntu as WSL
 - 다시 MS Store 로 가서 우분투 배포판 설치 및 초기 설정을 마친뒤 Window Terminal 에서 아래 명령어로 WSL 이 정상적으로 설치 되었는지 확인
-```shell
-> wsl -l
+
+  ```shell
+  > wsl -l
   NAME                   STATE           VERSION
-* Ubuntu                 Running         2
-```
+  * Ubuntu                 Running         2
+    ```
+
 - 만약 Version 이 1로 나온다면, 아래와 같이 설정
- ```shell
-> wsl --set-version Ubuntu 2
-```
+
+  ```shell 
+  > wsl --set-version Ubuntu 2
+  ```
 
 ## ZSH?
 shell 환경을 위한 도구로, bash 보다는 테마 추가가 가능해 좀더 보기 좋게 사용이 가능하고 각종 플러그인도 많아서 사용하기 편리 합니다.
