@@ -56,4 +56,5 @@ volumes 에 argument 들이 각각 의미하는 바는
 이를 정확하게 이해하지 못해 container-path 만 통일하고 host-path 를 각기 다르게 지정하여 container 내부에서 바라보는 path 만 같고 결국 다른 file 을 바라보고 있어 socket 통신이 번번이 실패했습니다.
 
 다른 socket 을 활용한 게시물을 참고해서 문제점을 파악하고 수정했습니다.
-refer: https://velog.io/@yh20studio/Docker-Django-Nginx-uwsgi-로컬서버에서-배포-진행
+
+[참고한 포스트](https://velog.io/@yh20studio/Docker-Django-Nginx-uwsgi-로컬서버에서-배포-진행)
