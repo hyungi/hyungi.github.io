@@ -66,6 +66,26 @@ $ports=@(80,443,10000,3000,5000);
 ...
 ```
 
+### File format issue.
+각종 파일을 Windows IDE 상에서 생성하고 올릴때 가끔 문제가 있는 경우가 있습니다.
+저 같은 경우에는 Shell script 상에서 제가 넣은적이 없는 ^M 이 추가 되어있는 경우가 종종 있었습니다.
+아래 포스트를 참고하면 직접적으로 보이는 ^M 문자를 vim editor 의 바이너리 모드로 진입해서 삭제하는 방법을 알려줍니다.
+https://thenewth.wordpress.com/2020/12/16/bin-shm-bad-interpreter-%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95/
+혹은 vim 으로 진입한뒤 아래 커맨드를 입력해도 됩니다.
+
+`:set ff=unix`
+
+하지만, 개행 문제가 아니라 그냥 파일 포맷 그 자체가 문제를 일으키는 경우도 있습니다.... 이 포스트를 올린 직후 경험했습니다.
+아래 처럼 갑작스럽게 meta description 에 파일 내용 전체가 들어가는 황당한 오류가 발생했는데..
+![meta-description-is-too-long](https://raw.githubusercontent.com/hyungi/hyungi.github.io/main/assets/images/meta-description-issue.png)
+
+이 역시 file format 문제로 밝혀졌습니다. 놀랍게도 IDE 에서 이전 포스트 복붙하면 문제가 발생하지 않습니다...(그럼 템플릿 기껏 만든 이유가 없는데...! ㅜ)
+```shell
+$ file 2022-01-26-WSL2-trouble-shooting.md
+2022-01-26-WSL2-trouble-shooting.md: ASCII text, with very long lines, with CRLF line terminators
+```
+암튼 이것도 file format 을 unix 로 바꿔주면 해결이 됩니다
+
 ### Note
 최근 회사의 보안 정책이 변화 되면서, WSL2 을 통해서 개발을 하고 있는데, WSL2 가 은근히 괜찮으면서도 아직 제대로 지원이 안되는 부분이 좀 있어서 트러블슈팅을 굉장이 많이 했습니다.
 특히나 위에서 언급한 localhost access 의 경우 VPN 으로 붙을 경우 거의 100% 확률로 걸리는 문제여서 꼭 해결해야 했고, 사실 집에서 혼자 개발 할때는 만나본적이 거의 없긴 했습니다 ㅎㅎ..
