@@ -2,7 +2,7 @@
 layout: post 
 title: Well known WSL2 problems 
 date: 2022-01-26 22:21 
-tags: [WSL2, localhost, VMMEM]
+tags: [localhost, WSL2, VMMEM, ubuntu, host-binding]
 toc: true
 ---
 
