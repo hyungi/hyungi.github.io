@@ -38,7 +38,7 @@ social:
     - https://github.com/hyungi
 google_site_verification: xxxxx
 lang: en
-
+future: true
 sass:
   sass_dir: _sass
   style: :compressed

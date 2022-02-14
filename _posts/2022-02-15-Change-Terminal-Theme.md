@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: Change Terminal Theme
 date: 2022-02-15 00:31
