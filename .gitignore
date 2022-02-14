@@ -1,5 +1,5 @@
-.vscode
-.idea
-.sass-cache
-_posts/_site
-_site
+.vscode/
+.idea/
+.sass-cache/
+_posts/_site/
+_site/
