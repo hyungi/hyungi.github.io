@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Change Terminal Theme
-data: 2022-02-15 00:31
-tags: [tag1,tag2,tag3]
+date: 2022-02-15 00:31
+tags: [starship,vscode,terminal]
 toc: true
 ---
 
@@ -46,7 +46,7 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
             "---",
             "layout: post",
             "title: ${TM_FILENAME_BASE/[^a-z^A-Z]//g}",
-            "data: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE",
+            "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE",
             "tags: [${1:tag1},${2:tag2},${3:tag3}]",
             "toc: true",
             "---"
