@@ -7,9 +7,9 @@ toc: true
 ---
 
 ## Change Terminal Theme
-zsh 로만 계속 쓰다 보니 조금 질리는 감이 있어서 terminal theme 을 한번 바꿔봤습니다.
+zsh 로만 계속 쓰다 보니 조금 질리는 감이 있어서 starship 으로 terminal theme 을 한번 바꿔봤습니다.
 
-[starship | cross-shell prompt](https://starship.rs/)
+![starship-image](https://starship.rs/logo.svg)
 
 Installation guide 에 따르면 nerd font 를 우선 설치해주고
 [Nerd Fonts](https://www.nerdfonts.com/)
@@ -22,7 +22,7 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 그리고 configuration guide 에 따라서 한번 간단한 세팅을 해줍니다.
 저는 아래와 같이 git 관련 세팅을 해줬습니다. https://starship.rs/config/#git-branch
 
-![startship-toml-config](https://raw.githubusercontent.com/hyungi/hyungi.github.io/main/assets/images/startship-toml-config.png)
+![starship-toml-config](https://raw.githubusercontent.com/hyungi/hyungi.github.io/main/assets/images/starship-toml-config.png)
 
 
 짜잔~
