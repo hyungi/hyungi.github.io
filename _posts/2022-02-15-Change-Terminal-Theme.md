@@ -8,7 +8,7 @@ toc: true
 ---
 
 ## Change Terminal Theme
-zsh 로만 계속 쓰다 보니 조금 질리는 감이 있어서 starship 으로 terminal theme 을 한번 바꿔봤습니다.
+그동안 shell 을 zsh 만 쓰다 보니 조금 질리는 감이 있어서 starship 으로 terminal theme 을 바꿔봤습니다.
 
 ![starship-image](https://starship.rs/logo.svg)
 
