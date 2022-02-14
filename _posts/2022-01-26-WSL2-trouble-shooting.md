@@ -8,9 +8,10 @@ toc: true
 
 ## Well known problems of WSL2
 WSL 에는 널리 알려져 있는 문제가 몇가지 있습니다.
-그 중에서 제가 최근에 만난 두가지 문제의 해결법을 정리해 두려고 합니다.
+그 중에서 제가 최근에 만난 세가지 문제의 해결법을 정리해 두려고 합니다.
+세번째 문제는 이 포스팅을 하면서 만나게 되었습니다 😂
 
-### Vmmem memory issue
+### 1. Vmmem memory issue
 도커를 자주 사용하다보면 Vmmem 이라는 프로세스의 점유율이 치솟는 경우가 종종 있는데요,
 이 문제에 대해서 MS 도 인지는 하고 있지만, 일단은 Workaround 만 소개되어 있는 상황입니다.
 대략적인 문제의 원인은 WSL2 가 파일시스템을 이용할때 메모리를 할당해서 쓰기만 하고 반납을 안하는 상황이라고만 알고 있습니다.
@@ -27,7 +28,7 @@ swap=0
 
 https://github.com/microsoft/WSL/issues/4166#issuecomment-526725261
 
-### Cannot connect to localhost app from Windows browser
+### 2. Cannot connect to localhost app from Windows browser
 WSL 에서 실행한 웹앱에 접근을 하려고 해도 404 에러 등이 뜨며 접근이 잘 안되는 경우가 있습니다.
 이것은 여러가지 해결 방법이 있는데
 
@@ -66,7 +67,7 @@ $ports=@(80,443,10000,3000,5000);
 ...
 ```
 
-### File format issue.
+### 3. File format issue.
 각종 파일을 Windows IDE 상에서 생성하고 올릴때 가끔 문제가 있는 경우가 있습니다.
 저 같은 경우에는 Shell script 상에서 제가 넣은적이 없는 ^M 이 추가 되어있는 경우가 종종 있었습니다.
 아래 포스트를 참고하면 직접적으로 보이는 ^M 문자를 vim editor 의 바이너리 모드로 진입해서 삭제하는 방법을 알려줍니다.
@@ -84,7 +85,13 @@ https://thenewth.wordpress.com/2020/12/16/bin-shm-bad-interpreter-%ed%95%b4%ea%b
 $ file 2022-01-26-WSL2-trouble-shooting.md
 2022-01-26-WSL2-trouble-shooting.md: ASCII text, with very long lines, with CRLF line terminators
 ```
-암튼 이것도 file format 을 unix 로 바꿔주면 해결이 됩니다
+암튼 이것도 file format 을 unix 로 바꿔주면 해결이 됩니다.
+
+그리고 추후 문제 재발을 막기 위해서 아래와 같이 개행 문자 설정도 바꿔 줍니다.
+```shell
+git config --global core.autocrlf false
+```
+[참고한포스트](https://dabo-dev.tistory.com/13)
 
 ### Note
 최근 회사의 보안 정책이 변화 되면서, WSL2 을 통해서 개발을 하고 있는데, WSL2 가 은근히 괜찮으면서도 아직 제대로 지원이 안되는 부분이 좀 있어서 트러블슈팅을 굉장이 많이 했습니다.
