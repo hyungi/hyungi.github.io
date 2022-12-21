@@ -45,7 +45,10 @@ In particular, this prohibits recursive read locking.
 4. 이후 시도 되는 모든 Read Lock 이 blcoking 된다
 
 3번 단계에서 첫번째 goroutine 은 dead lock 에 빠진다고 보면 된다.
-통상적으로 golang 에서 mutex 는 거는 시점에 defer 를 불러서 이후 작업이 완료되면 lock 이 해제될 수 있도록 구현 하는데, 첫번째 Read Lock 은 당연하게도 두번째 Read Lock 이 풀린 이후에 풀리도록 구현이 되어있기 때문에 두번째 Read Lock 은 자신보다 나중에 풀리도록 의도된 첫번째 Read Lock 이 풀리기를 기다리는 셈이 된다.
+
+통상적으로 golang 에서 mutex 는 거는 시점에 defer(*Java 의 finally 와 유사하며 속해 있는 함수가 return 될때 실행이 된다*) 를 불러서 이후 작업이 완료되면 lock 이 해제될 수 있도록 구현 하는데,
+
+첫번째 Read Lock 은 당연하게도 두번째 Read Lock 이 풀린 이후에 풀리도록 구현이 되어있기 때문에 두번째 Read Lock 은 자신보다 나중에 풀리도록 의도된 첫번째 Read Lock 이 풀리기를 기다리는 셈이 된다.
 
 그래도 Write Lock 이 풀리면 알아서 풀려야 하지 않겠냐고?
 
@@ -69,4 +72,4 @@ In particular, this prohibits recursive read locking.
 즉 위에서 설명한 4가지 필요조건 중 2, 4번을 해결한다고도 볼 수 있다.
 
 ## 오늘의 교훈
-코드 리뷰를... 잘하자 :disappointed_relieved:
+코드 리뷰를... 잘하자 😥
